@@ -1,28 +1,53 @@
 :root {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #12324a;
-  background-color: #edf7ff;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: Arial, sans-serif;
+	color: #16325c;
+	background: #eaf3ff;
 }
 
 * {
-  box-sizing: border-box;
-}
-
-html,
-body,
-#root {
-  margin: 0;
-  min-height: 100%;
+	box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-  background: #edf7ff;
-  color: #12324a;
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #eaf3ff 0%, #cfe3ff 100%);
+}
+
+#root {
+	min-height: 100vh;
+	padding: 48px 20px;
+}
+
+#root > div {
+	width: min(100%, 560px);
+	margin: 0 auto;
+}
+
+h1 {
+	margin: 0 0 24px;
+	color: #0b4f9c;
+	font-size: clamp(2rem, 5vw, 3rem);
+	text-align: center;
+}
+
+#root > div > div {
+	padding: 28px;
+	border: 1px solid #9fc5f5;
+	border-radius: 8px;
+	background: #ffffff;
+	box-shadow: 0 12px 28px rgba(22, 76, 135, 0.15);
+}
+
+p {
+	margin: 0;
+	padding: 14px 0;
+	border-bottom: 1px solid #d7e8fc;
+	color: #244d7d;
+	font-size: 1rem;
+}
+
+p:last-child {
+	border-bottom: 0;
 }
