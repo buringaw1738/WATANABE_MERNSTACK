@@ -51,3 +51,60 @@ p {
 p:last-child {
 	border-bottom: 0;
 }
+
+.student-form {
+	display: grid;
+	gap: 10px;
+}
+
+.student-form label {
+	font-weight: 700;
+	color: #16325c;
+}
+
+.student-form input,
+.student-form select {
+	width: 100%;
+	padding: 11px 12px;
+	border: 1px solid #9fc5f5;
+	border-radius: 4px;
+	font: inherit;
+	color: #16325c;
+	background: #f8fbff;
+}
+
+.form-actions {
+	display: flex;
+	gap: 10px;
+	margin-top: 14px;
+}
+
+.button {
+	padding: 11px 16px;
+	border: 0;
+	border-radius: 4px;
+	background: #0b4f9c;
+	color: #ffffff;
+	font: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.secondary-button {
+	background: #d7e8fc;
+	color: #16325c;
+}
+
+.new-students-section {
+	margin-top: 28px;
+}
+
+.new-students-section h2 {
+	margin-bottom: 16px;
+	color: #0b4f9c;
+}
+
+.new-students-list {
+	display: grid;
+	gap: 16px;
+}

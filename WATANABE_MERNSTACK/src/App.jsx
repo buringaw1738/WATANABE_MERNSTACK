@@ -1,28 +1,22 @@
-import StudentCard from "./components/studentcard.jsx";
-import Subjects from "./components/subjects.jsx";
+import StudentDetails from './pages/StudentDetails';
+import Students from './pages/Students';
+import Home from './pages/Home';
+import Navbar from './components/navbar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-  function App() {
-    return (
-      <div>
-        
-        <h1>Student Information</h1>
-        <StudentCard
-          name="Rey Yuki"
-          age={20}
-          birthday="2005-12-06"
-          studentNumber="202401081"
-          course="Information Technology"
-        />
+function App() {
+  return(
 
-                <h1>Subject Information</h1>
-        <Subjects
-          schedCode="IT101"
-          subName="Introduction to Programming"
-          classSched="Mon, Wed 10:00 AM - 12:00 PM"
-        />
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/students" element={<Students />} />
+    <Route path="/students/:id" element={<StudentDetails />} />
+    </Routes>
+    </BrowserRouter>
+  );
 
-      </div>
-    );
-  }
+}
 
-  export default App;
+export default App;

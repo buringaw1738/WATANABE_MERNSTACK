@@ -1,0 +1,31 @@
+[
+    {
+    "id": 201,
+    "name":"Rey Yuki",
+    "age":20,
+    "birthday":"2005-12-06",
+    "studentNumber":"202401081",
+    "course":"BSIT",
+    "section":"3-7"
+    },
+
+    {
+    "id": 202,
+    "name":"John Jerard",
+    "age":21,
+    "birthday":"2005-07-25",
+    "studentNumber":"202401188",
+    "course":"BSIT",
+    "section":"3-7"
+    },
+
+    {
+    "id": 203,
+    "name":"Prinz Geon",
+    "age":20,
+    "birthday":"2006-02-14",
+    "studentNumber":"202422183",
+    "course":"BSIT",
+    "section":"3-7"
+    }
+]
