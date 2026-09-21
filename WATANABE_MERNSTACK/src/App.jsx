@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import AddStudent from './pages/AddStudent';
 import AddTeacher from './pages/AddTeacher';
 import Navbar from './components/navbar';
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import initialStudents from './data/student.json';
 import initialTeachers from './data/teacher.json';
@@ -24,7 +24,7 @@ function App() {
   return(
     
 
-    <HashRouter>
+    <Router>
     <Navbar/>
     <Routes>
     <Route path="/" element={<Home />} />
@@ -35,7 +35,7 @@ function App() {
     <Route path="/teachers/:id" element={<TeacherDetails teachers={teachers} />} />
     <Route path="/teachers/add" element={<AddTeacher onAddTeacher={addTeacher} />} />
     </Routes>
-    </HashRouter>
+    </Router>
   );
 
 }
