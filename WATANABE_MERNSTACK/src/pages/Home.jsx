@@ -1,5 +1,7 @@
 export default function Home() {
     return(
-        <p>Welcome User</p>
+        <main className="page">
+            <div className="welcome">Welcome User</div>
+        </main>
     );
 }

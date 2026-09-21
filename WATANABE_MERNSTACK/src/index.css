@@ -1,7 +1,7 @@
 :root {
 	font-family: Arial, sans-serif;
-	color: #16325c;
-	background: #eaf3ff;
+	color: #222;
+	background: #f5f5f5;
 }
 
 * {
@@ -12,99 +12,198 @@ body {
 	margin: 0;
 	min-width: 320px;
 	min-height: 100vh;
-	background: linear-gradient(135deg, #eaf3ff 0%, #cfe3ff 100%);
+	background: #f5f5f5;
+}
+
+a {
+	color: #0b4f9c;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 #root {
 	min-height: 100vh;
-	padding: 48px 20px;
 }
 
-#root > div {
-	width: min(100%, 560px);
+.navbar {
+	padding: 16px 20px;
+	background: #222;
+}
+
+.navbar ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 18px;
+	max-width: 1000px;
 	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.navbar a {
+	color: #ffffff;
+}
+
+.page {
+	width: min(100% - 40px, 1000px);
+	margin: 0 auto;
+	padding: 40px 0;
+}
+
+h1,
+h2 {
+	margin-top: 0;
+	color: #222;
 }
 
 h1 {
-	margin: 0 0 24px;
-	color: #0b4f9c;
-	font-size: clamp(2rem, 5vw, 3rem);
-	text-align: center;
+	margin-bottom: 24px;
+	font-size: 2.25rem;
 }
 
-#root > div > div {
-	padding: 28px;
-	border: 1px solid #9fc5f5;
-	border-radius: 8px;
+.welcome,
+.details-card,
+.record-card,
+.form-card {
+	padding: 24px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
 	background: #ffffff;
-	box-shadow: 0 12px 28px rgba(22, 76, 135, 0.15);
 }
 
-p {
+.welcome {
+	font-size: 1.1rem;
+}
+
+.record-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 16px;
+}
+
+.record-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.record-card p,
+.details-card p {
 	margin: 0;
-	padding: 14px 0;
-	border-bottom: 1px solid #d7e8fc;
-	color: #244d7d;
-	font-size: 1rem;
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+	color: #444;
 }
 
-p:last-child {
+.record-card p:last-of-type,
+.details-card p:last-of-type {
 	border-bottom: 0;
 }
 
-.student-form {
-	display: grid;
-	gap: 10px;
-}
-
-.student-form label {
-	font-weight: 700;
-	color: #16325c;
-}
-
-.student-form input,
-.student-form select {
-	width: 100%;
-	padding: 11px 12px;
-	border: 1px solid #9fc5f5;
-	border-radius: 4px;
-	font: inherit;
-	color: #16325c;
-	background: #f8fbff;
-}
-
-.form-actions {
-	display: flex;
-	gap: 10px;
+.record-card a,
+.details-card a {
 	margin-top: 14px;
 }
 
+.form-page {
+	width: min(100% - 40px, 720px);
+	margin: 0 auto;
+	padding: 40px 0;
+}
+
+.form-heading {
+	margin-bottom: 24px;
+}
+
+.form-heading h1 {
+	margin-bottom: 8px;
+}
+
+.eyebrow {
+	margin: 0 0 8px;
+	color: #555;
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.form-intro {
+	margin: 0;
+	color: #666;
+}
+
+.record-form {
+	display: grid;
+	gap: 14px;
+}
+
+.record-form label {
+	display: grid;
+	gap: 7px;
+	font-weight: 700;
+}
+
+.record-form input,
+.record-form select {
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font: inherit;
+	color: #222;
+	background: #fff;
+}
+
+.record-form input:focus,
+.record-form select:focus {
+	outline: 2px solid #aaa;
+	border-color: #777;
+}
+
+.form-actions {
+	margin-top: 6px;
+}
+
 .button {
+	width: 100%;
 	padding: 11px 16px;
 	border: 0;
 	border-radius: 4px;
-	background: #0b4f9c;
+	background: #222;
 	color: #ffffff;
 	font: inherit;
+	font-weight: 700;
 	cursor: pointer;
-	text-decoration: none;
 }
 
-.secondary-button {
-	background: #d7e8fc;
-	color: #16325c;
-}
-
-.new-students-section {
+.recent-section {
 	margin-top: 28px;
 }
 
-.new-students-section h2 {
+.recent-section h2 {
 	margin-bottom: 16px;
-	color: #0b4f9c;
+	font-size: 1.4rem;
 }
 
-.new-students-list {
-	display: grid;
-	gap: 16px;
+@media (max-width: 600px) {
+	.page,
+	.form-page {
+		width: min(100% - 32px, 720px);
+		padding: 28px 0;
+	}
+
+	.navbar ul {
+		gap: 8px 14px;
+	}
+
+	.form-card,
+	.details-card,
+	.record-card,
+	.welcome {
+		padding: 18px;
+	}
 }

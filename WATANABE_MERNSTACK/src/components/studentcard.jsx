@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function StudentCard({id, name, age, birthday, studentNumber, course, yearLevel, sex, showDetailsLink = true}) {
     return(
-        <div>
+        <div className="record-card">
             <p>Name: {name}</p>
             <p>Age: {age}</p>
             <p>Birthday: {birthday}</p>
@@ -13,7 +13,7 @@ function StudentCard({id, name, age, birthday, studentNumber, course, yearLevel,
   
 
         {showDetailsLink && (
-            <Link to={`/students/${id}`} className="text-blue-600 hover:underline">
+            <Link to={`/students/${id}`}>
             View Student Details
             </Link>
         )}

@@ -1,34 +1,35 @@
-import studentsData from "../data/student.json";
 import { useParams, Link } from "react-router-dom";
 
-export default function StudentDetails() {
+export default function StudentDetails({ students }) {
     const { id } = useParams();
-    const student = studentsData.find((s) => s.id === Number(id));
+    const student = students.find((s) => s.id === Number(id));
 
     if (!student) {
         return (
-            <div className="p-4">
+            <main className="page">
                 <h1>Student Details</h1>
                 <p>Student not found.</p>
-                <Link to="/students" className="text-blue-600 hover:underline">
+                <Link to="/students">
                     Back to Students
                 </Link>
-            </div>
+            </main>
         );
     }
 
     return (
-        <div className="p-4">
+        <main className="page">
+            <div className="details-card">
             <h1>Student Details</h1>
-            <h2 className="text-lg font-bold">Name: {student.name}</h2>
-            <p className="text-lg">Age: {student.age}</p>
-            <p className="text-lg">Birthday: {student.birthday}</p>
-            <p className="text-lg">Student Number: {student.studentNumber}</p>
-            <p className="text-lg">Course: {student.course}</p>
+            <h2>Name: {student.name}</h2>
+            <p>Age: {student.age}</p>
+            <p>Birthday: {student.birthday}</p>
+            <p>Student Number: {student.studentNumber}</p>
+            <p>Course: {student.course}</p>
 
-            <Link to="/students" className="text-blue-600 hover:underline">
+            <Link to="/students">
                 Back
             </Link>
-        </div>
+            </div>
+        </main>
     );
 }

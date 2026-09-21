@@ -1,0 +1,26 @@
+[
+    {
+    "name":"Aragon",
+    "employeeNumber":"F001",
+    "department":"DIT",
+    "specialization":"Software Engineering",
+    "sex":"Male"
+    },
+
+    {
+    "name":"Cruzat",
+    "employeeNumber":"F002",
+    "department":"DIT",
+    "specialization":"Programming",
+    "sex":"Male"
+    },
+
+    {
+    "name":"Baluyot",
+    "employeeNumber":"F003",
+    "department":"BFC",
+    "specialization":"Accounting",
+    "sex":"Male"
+    }
+
+]
