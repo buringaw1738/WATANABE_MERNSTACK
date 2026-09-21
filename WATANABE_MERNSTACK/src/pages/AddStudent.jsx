@@ -53,7 +53,6 @@ export default function AddStudent() {
                 <div className="form-heading">
                     <p className="eyebrow">Student records</p>
                     <h1>Add Student</h1>
-                    <p className="form-intro">Enter the student's information below.</p>
                 </div>
                 <form className="record-form" onSubmit={handleSubmit}>
                 <label htmlFor="student-name">
